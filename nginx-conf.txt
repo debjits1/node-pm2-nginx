@@ -1,0 +1,9 @@
+*Added below conf to run nginx*
+server {
+       listen       7500;
+       server_name  localhost  alias  another.alias;
+
+       location / {
+           proxy_pass   http://192.168.0.108:6500;
+       }
+    }
